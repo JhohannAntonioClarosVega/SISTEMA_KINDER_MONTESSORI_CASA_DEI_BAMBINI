@@ -1,7 +1,7 @@
 import React from 'react';
 import prisma from '@/lib/prisma';
 import { Phone, Calendar, Inbox } from 'lucide-react';
-
+export const dynamic = 'force-dynamic';
 export default async function MensajesPage() {
   // Traemos los mensajes ordenados por los más recientes primero
   const mensajes = await prisma.mensaje.findMany({

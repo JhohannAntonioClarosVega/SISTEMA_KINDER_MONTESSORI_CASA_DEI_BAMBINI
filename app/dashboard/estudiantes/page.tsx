@@ -5,6 +5,7 @@ import { CrearEstudianteModal } from '@/components/CrearEstudianteModal';
 import { TopBarActions } from '@/components/TopBarActions';
 import { Users, Baby, Palette, Rocket, GraduationCap, Smile } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
 export default async function EstudiantesPage({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
   const params = await searchParams;
   const query = params?.q || '';
