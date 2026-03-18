@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+}
+
+// 1. Tabla para el CRUD de estudiantes
+model Estudiante {
+  id               String   @id @default(uuid())
+  nombres          String
+  apellidos        String
+  edad             Int
+  nivel            String   
+  nombreTutor      String
+  telefonoTutor    String
+  emailTutor       String?
+  alergiasOMedico  String?  
+  fechaInscripcion DateTime @default(now())
+  actualizadoEn    DateTime @updatedAt
+}
+
+// 2. Tabla para los mensajes de los papás (Formulario de Contacto)
+model MensajeContacto {
+  id        String   @id @default(uuid())
+  nombre    String   
+  email     String
+  telefono  String?
+  mensaje   String
+  leido     Boolean  @default(false)
+  fecha     DateTime @default(now())
+}
+model Mensaje {
+  id        String   @id @default(cuid())
+  nombre    String
+  telefono  String
+  mensaje   String
+  fecha     DateTime @default(now())
+  leido     Boolean  @default(false)
+}
