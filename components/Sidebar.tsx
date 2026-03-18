@@ -28,7 +28,7 @@ export function Sidebar() {
   };
 
   const menuItems = [
-    { name: 'Directorio Pioneros', href: '/dashboard/estudiantes', icon: Users },
+    { name: 'Gestión de Estudiantes', href: '/dashboard/estudiantes', icon: Users },
     { name: 'Mensajes', href: '/dashboard/mensajes', icon: MessageSquare },
   ];
 
